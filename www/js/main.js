@@ -3,6 +3,9 @@ import Calibrate from './calibrate.js';
 import Menu from './menu.js';
 
 async function init() {
+
+    screen.orientation.lock('landscape');
+
     window.addEventListener('hashchange', function () {
         switch (this.location.hash) {
             case '#menu':
@@ -28,7 +31,6 @@ async function init() {
     }, false);
 
     location.hash = 'menu';
-
 }
 
 init();

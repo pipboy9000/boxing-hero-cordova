@@ -35,7 +35,7 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <title>Hello World</title>
+    <title>Boxing Hero</title>
 </head>
 
 <body>
@@ -46,8 +46,7 @@
     </div>
     <div id="game" class="game">
         <div class="container">
-            <div class="flash"></div>
-            <canvas class="canvas"></canvas>
+            <canvas class="effects"></canvas>
             <div class="level">Level 1</div>
             <div class="msg">Get Ready!</div>
             <div class="timer">
@@ -62,8 +61,10 @@
             <button class="restartBtn">Restart</button>
         </div>
     </div>
+    <script src="es6-modules-loader/babel-browser-build.js"></script>
+    <script src="es6-modules-loader/browser-es-module-loader.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 
 </html>

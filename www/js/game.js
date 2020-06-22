@@ -8,7 +8,6 @@ const STATE = {
 }
 
 let gameDiv;
-let flashDiv;
 let hpBar;
 let hpColor;
 let timerCircle;
@@ -36,7 +35,6 @@ function init() {
     msg = gameDiv.getElementsByClassName('msg')[0];
     levelDiv = gameDiv.getElementsByClassName('level')[0];
     restartBtn = document.getElementsByClassName('restartBtn')[0];
-    flashDiv = document.getElementsByClassName('flash')[0];
     restartBtn.onclick = newGame;
 }
 
@@ -116,19 +114,8 @@ function gameOver() {
 
 }
 
-function flash(strength) {
-    let normalized = strength / 20;
-    flashDiv.style.opacity = normalized;
-    flashDiv.style.transition = "";
-    setTimeout(() => {
-        flashDiv.style.transition = "opacity 0.2s linear";
-        flashDiv.style.opacity = 0;
-    }, 5);
-}
-
 function hit(hit) {
     if (state == STATE.Playing) {
-        flash(hit);
         hp -= hit;
         if (hp < 0) hp = 0;
         let hpNormalized = hp / maxHp;
