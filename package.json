@@ -16,7 +16,6 @@
     "browser-es-module-loader": "^0.4.1",
     "cordova-android": "^8.1.0",
     "cordova-browser": "^6.0.0",
-    "cordova-plugin-screen-orientation": "^3.0.2",
     "es6-promise-plugin": "^4.2.2"
   },
   "devDependencies": {
@@ -24,8 +23,7 @@
   },
   "cordova": {
     "plugins": {
-      "cordova-plugin-whitelist": {},
-      "cordova-plugin-screen-orientation": {}
+      "cordova-plugin-whitelist": {}
     },
     "platforms": [
       "browser",

@@ -10,6 +10,7 @@ const STATE = {
 let gameDiv;
 let hpBar;
 let hpColor;
+let timerDiv;
 let timerCircle;
 let timerSeconds;
 let msg;
@@ -32,6 +33,7 @@ function init() {
     hpColor = gameDiv.getElementsByClassName('hpColor')[0];
     timerCircle = gameDiv.getElementsByClassName('timerCircle')[0];
     timerSeconds = gameDiv.getElementsByClassName('timerSeconds')[0];
+    timerDiv = gameDiv.getElementsByClassName('timer')[0];
     msg = gameDiv.getElementsByClassName('msg')[0];
     levelDiv = gameDiv.getElementsByClassName('level')[0];
     restartBtn = document.getElementsByClassName('restartBtn')[0];
@@ -70,6 +72,7 @@ async function newGame() {
     level = 0;
     setTimer(3, nextLevel);
     gameDiv.style.display = 'flex';
+    timerDiv.style.opacity = "1";
     state = STATE.GetReady;
     maxHp = 100;
     hp = 100;
@@ -110,6 +113,7 @@ function gameOver() {
     setMsg('Game Over');
     state = STATE.GameOver;
     restartBtn.style.opacity = "1";
+    timerDiv.style.opacity = "0";
     restartBtn.onclick = newGame;
 
 }
