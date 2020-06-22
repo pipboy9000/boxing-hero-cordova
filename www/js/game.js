@@ -76,7 +76,7 @@ async function newGame() {
     state = STATE.GetReady;
     maxHp = 100;
     hp = 100;
-    hpBar.style.width = "90%";
+    hpBar.style.width = "100%";
     hpColor.style.backgroundColor = "#62ff00";
     restartBtn.style.opacity = "0";
     restartBtn.onclick = '';
@@ -92,7 +92,7 @@ function nextLevel() {
     levelDiv.innerText = "Level " + level
     maxHp = 100 + level * 35;
     hp = maxHp;
-    hpBar.style.width = "90%";
+    hpBar.style.width = "100%";
     hpColor.style.backgroundColor = "#62ff00";
     setMsg('GO!!!');
     setTimer(20 + level * 3, gameOver);
@@ -104,7 +104,7 @@ function getReady() {
     setMsg("Get Ready");
     let rest = 5 + level * 3;
     setTimer(rest, nextLevel);
-    hpBar.style.width = "90%";
+    hpBar.style.width = "100%";
     hpColor.style.backgroundColor = "#62ff00";
 
 }
